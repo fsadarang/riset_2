@@ -49,9 +49,9 @@ cat > namelist.wps << EOF
  j_parent_start    = ${jpars_1},${jpars_2},${jpars_3},
  e_we              = ${ewe_1},${ewe_2},${ewe_3},
  e_sn              = ${esn_1},${esn_2},${esn_3},
- geog_data_res     = '5m','2m','30s',
- dx                = 9000,
- dy                = 9000,
+ geog_data_res     = 'default', 'default+srtm_30m+cglc_modis_lcz', 'default+srtm_30m+cglc_modis_lcz'
+ dx                = 3000,
+ dy                = 3000,
  map_proj          =  'mercator',
  ref_lat           = ${reflat},
  ref_lon           = ${reflon},
