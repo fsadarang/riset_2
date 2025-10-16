@@ -154,35 +154,14 @@ nested                   = .false.,   .true.,   .true., .true.,
 nio_tasks_per_group      = 0,
 nio_groups               = 1,
 /
-
-&diags
-solar_diagnostics = 1,
-/
-
-&afwa
-afwa_diag_opt  = 1,
-!afwa_ptype_opt = 1,
-!afwa_vil_opt = 1,
-!afwa_radar_opt = 1,
-afwa_severe_opt = 1,
-!afwa_icing_opt = 1,
-!afwa_vis_opt = 1,
-!afwa_cloud_opt = 1,
-!afwa_therm_opt = 1,
-!afwa_turb_opt = 1,
-!afwa_buoy_opt = 1,
-!afwa_ptype_ccn_tmp = 264.15,
-!afwa_ptype_tot_melt = 50,
-!progn = 1,
-/
 EOF
 
 ml load mpi compiler
 time mpiexec.hydra -np 20 ./real.exe
 
-cp namelist.input temp/namelist.realexe
-cp rsl.out.0000 temp/rsl.out.0000.realexe
-cp rsl.error.0000 temp/rsl.error.0000.realexe
-cp wrfbdy_d01 wrfinput_d0* temp
+cp namelist.input utl/namelist.input_previous
+cp rsl.out.0000 utl/rsl.out.0000.realexe
+cp rsl.error.0000 utl/rsl.error.0000.realexe
+cp wrfbdy_d01 wrfinput_d0* utl
 
 exit 0
