@@ -122,29 +122,29 @@ ensdim                   = 144,
 /
 
 &dynamics
-hybrid_opt               = 2,
-w_damping                = 0,
-diff_opt                 = 1,
+w_damping                = 1,
+diff_opt                 = 2,
 km_opt                   = 4,
-diff_6th_opt             = 0,        0,        0,
-diff_6th_factor          = 0.12,     0.12,     0.12,
+diff_6th_opt             = 0,        0,        0,        0,
+diff_6th_factor          = 0.12,     0.12,     0.12,     0.12,
 base_temp                = 290.,
 damp_opt                 = 0,
-zdamp                    = 5000.,    5000.,    5000.,
-dampcoef                 = 0.2,      0.2,      0.2,
-khdif                    = 0,        0,        0,
-kvdif                    = 0,        0,        0,
-non_hydrostatic          = .true.,   .true.,   .true.,
-moist_adv_opt            = 1,        1,        1,
-scalar_adv_opt           = 1,        1,        1,
+zdamp                    = 5000.,    5000.,    5000.,    5000.,
+dampcoef                 = 0.2,      0.2,      0.2,      0.2,
+khdif                    = 0,        0,        0,        0,
+kvdif                    = 0,        0,        0,        0,
+non_hydrostatic          = .true.,   .true.,   .true.,   .true.,
+moist_adv_opt            = 1,        1,        1,        1,
+scalar_adv_opt           = 1,        1,        1,        1,
+gwd_opt                  = 1,        0,        0,        0,
 /
 
 &bdy_control
 spec_bdy_width           = 5,
 spec_zone                = 1,
 relax_zone               = 4,
-specified                = .true.,  .false.,  .false.,
-nested                   = .false.,   .true.,   .true.,
+specified                = .true.,  .false.,  .false., .false.,
+nested                   = .false.,   .true.,   .true., .true.,
 /
 
 &grib2
