@@ -24,7 +24,7 @@ set -x
 source ~/.bashrc
 dom=WDIR
 work_dir=/home/riset_2/WRF/${dom}
-out_dir=${data_dir}/OUTPUT
+out_dir=${data_dir}/output
 sdate=`date +"%Y%m%d"`
 edate=${sdate}
 length=3
@@ -57,8 +57,8 @@ truelat_2=0
 standlon=106.906
 #refx=310.5
 #refy=156.0
-#nprocx=44
-#nprocy=28
+nprocx=24
+nprocy=16
 #niot=2
 #niog=8
 # END OF USER CONFIGURATION ############################
@@ -116,24 +116,24 @@ echo "                                   ${yyyy1}${mm1}${dd1}${cc}              
 echo "############################################################################################"
 time ${scrp_dir}/clean.sh
 # download local observation
-echo "step 1 download local observation data"
-time ${scrp_dir}/download_ftp.sh
+#echo "step 1 download local observation data"
+#time ${scrp_dir}/download_ftp.sh
 
 # create little R format
-echo "step 2 create little R format"
-time ${scrp_dir}/csv2littleR.R ${yyyy1}${mm1}${dd1}${cc}
+#echo "step 2 create little R format"
+#time ${scrp_dir}/csv2littleR.R ${yyyy1}${mm1}${dd1}${cc}
 
 # download radar data
-echo "step 3 download radar data"
-time ${scrp_dir}/download_radar.sh
+#echo "step 3 download radar data"
+#time ${scrp_dir}/download_radar.sh
 
 # run obsproc
-echo "step 4 run obsproc"
-time ${scrp_dir}/obsproc.sh
+#echo "step 4 run obsproc"
+#time ${scrp_dir}/obsproc.sh
 
 # download satelite data
-echo "step 5 download himawari"
-time ${scrp_dir}/download_hima.sh
+#echo "step 5 download himawari"
+#time ${scrp_dir}/download_hima.sh
 
 # download initial condition data
 echo "step 6 download initial condition data"
