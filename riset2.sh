@@ -22,8 +22,8 @@ set -x
 
 # START OF USER CONFIGURATION ##########################
 source ~/.bashrc
-dom=riset_2
-work_dir=/scratch/inanwp/WDIR/${dom}
+dom=WDIR
+work_dir=/home/riset_2/WRF/${dom}
 out_dir=${data_dir}/OUTPUT
 sdate=`date +"%Y%m%d"`
 edate=${sdate}
