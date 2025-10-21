@@ -28,7 +28,7 @@ ln -sf ${wps_dir}/metgrid/src/metgrid.exe .
 ln -sf ${work_dir}/static/*.TBL .
 cp ${work_dir}/static/link_grib.csh .
 ln -sf ${work_dir}/static/geo_em*.nc .
-./link_grib.csh ${gfs_dir}/${stanggal}${cc}/gfs.t"${cc}"z.pgrb2.0p25.f*
+./link_grib.csh ${ifs_dir}/${stanggal}${cc}/gfs.t"${cc}"z.pgrb2.0p25.f*
 
 cat > namelist.wps << EOF
 &share
