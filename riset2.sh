@@ -137,7 +137,7 @@ time ${scrp_dir}/clean.sh
 
 # download initial condition data
 echo "step 6 download initial condition data"
-if [ -e "${gfs_dir}/${yyyy1}${mm1}${dd1}${cc}/gfs.t${cc}z.pgrb2.0p25.${dtag}" ]; then
+if [ -e "${gfs_dir}/${yyyy1}${mm1}${dd1}${cc}/ecmwf_A1_${yyyy1}${mm1}${dd1}${cc}.pgrb2.0p25.${dtag}" ]; then
         echo "File GFS ${yyyy1}${mm1}${dd1}${cc} exist, skipping"
 else
 	skipe=on
